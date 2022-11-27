@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import MainGrid from '../src/components/MainGrid/index';
 import Box from '../src/components/Box/index';
+import { AlurakutMenu } from '../src/lib/AluraKutCommons';
 
 function ProfileUserSideBar(props) {
   console.log(props);
@@ -14,11 +15,13 @@ function ProfileUserSideBar(props) {
 }
 
 export default function Home() {
-  const githubUser: string = 'nioritos';
+  const userAleatory = 'nioritos';
   return (
-    <MainGrid>
+    <>
+    <AlurakutMenu/>
+      <MainGrid>
       <div className='profileArea' style={{ gridArea: 'profileArea' }}>
-        <ProfileUserSideBar githubUser={githubUser}/>
+        <ProfileUserSideBar githubUser={userAleatory}/>
       </div>
       <div className='welcomeArea' style={{ gridArea: 'welcomeArea' }}>
         <Box>
@@ -37,5 +40,6 @@ export default function Home() {
       </div>
 
     </MainGrid>
+    </>
   )
 }

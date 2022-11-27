@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-
+import { AlurakutStyles } from '../src/lib/AluraKutCommons'
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
     display: block;
   }
+  ${AlurakutStyles}
 `
 
 interface ThemeInterface {
